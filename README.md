@@ -1,2 +1,20 @@
 # xem-history
-XEMの送金・受取の記録を日時、数量、受取日時でのレート、送付元アドレス、送付先アドレス、メッセージとともに記録するサービスです。You can log your history of sending or receiving XEM. (ex. Date and Time, Amount, Rate, FromAddress, ToAddress, Message)
+
+## Build Setup
+
+```bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
