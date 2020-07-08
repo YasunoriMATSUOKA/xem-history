@@ -9,12 +9,6 @@
         <a class="navbar-item" href="/">
           <img src="~assets/buefy.png" alt="Buefy" height="28" />
         </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
       </div>
     </nav>
 
@@ -39,8 +33,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   data() {
     return {
       items: [
@@ -50,12 +46,12 @@ export default {
           to: { name: 'index' },
         },
         {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' },
+          title: 'Help',
+          icon: 'help',
+          to: { name: 'help' },
         },
       ],
     }
   },
-}
+})
 </script>

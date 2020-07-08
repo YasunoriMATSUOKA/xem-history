@@ -22,17 +22,19 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropOptions } from 'vue'
+
+export default Vue.extend({
   props: {
     title: {
       type: String,
       required: true,
-    },
+    } as PropOptions,
     icon: {
       type: String,
       required: true,
-    },
+    } as PropOptions,
   },
-}
+})
 </script>
