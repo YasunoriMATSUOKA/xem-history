@@ -1,2 +1,3 @@
-<p>home works!</p>
-<view-home></view-home>
+<view-home [ticker]="invoice.ticker" [address]="invoice.address" [invoiceUnit]="invoice.invoiceUnit"
+  [invoiceAmount]="invoice.invoiceAmount" (appCreateInvoice)="onCreateInvoice($event)">
+</view-home>

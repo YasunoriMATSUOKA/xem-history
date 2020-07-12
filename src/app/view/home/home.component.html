@@ -1,1 +1,24 @@
-<p>view-home works!</p>
+<form #formRef="ngForm" fxLayout="column" (submit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>支払通貨</mat-label>
+    <mat-select #tickerRef required type="string" [(ngModel)]="ticker" name="ticker">
+      <mat-option value="xem">XEM</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>支払先アドレス</mat-label>
+    <input #addressRef matInput required type="string" [(ngModel)]="address" name="address" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>請求価格</mat-label>
+    <input #invoiceAmountRef matInput required type="number" min="0" [(ngModel)]="invoiceAmount" name="invoiceAmount" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>請求価格単位通貨</mat-label>
+    <mat-select #invoiceUnitRef required type="string" [(ngModel)]="invoiceUnit" name="invoiceUnit">
+      <mat-option value="jpy">JPY</mat-option>
+      <mat-option value="xem">XEM</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-flat-button color="primary" [disabled]="formRef.invalid">請求QR表示</button>
+</form>
